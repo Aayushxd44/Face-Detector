@@ -1,0 +1,69 @@
+ /* General container styling for centering and responsive layout */
+.face-recognition-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+  }
+  
+  /* Styling the video element to make it responsive */
+  .video-element {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the canvas to align it with the video element */
+  .canvas-element {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    border-radius: 10px;
+    pointer-events: none; /* Make sure the canvas doesn't block interaction with the video */
+  }
+  
+  /* Styling the capture button */
+  .capture-button {
+    background-color: #4681f4;
+    color: rgb(237, 197, 148);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .capture-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .face-recognition-container {
+      padding: 10px;
+    }
+  
+    .video-element, .canvas-element {
+      width: 100%;
+    }
+  
+    .capture-button {
+      width: 100%;
+      font-size: 14x;
+      padding: 10px;
+    }
+  }
+  
